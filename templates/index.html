@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MachaAI Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="chatbot">
+        <button id="chat-toggle" class="chat-toggle">💬</button>
+        
+        <div id="chat-window" class="chat-window hidden">
+            <div class="chat-header">
+                <span>MachaAI Assistant</span>
+                <button id="close-btn">&times;</button>
+            </div>
+            <div id="chat-body" class="chat-body">
+                <div class="bot-message">
+                    👋 Hi, I'm <strong>MachaAI</strong> - your University assistant.<br>
+                    I can help you with: <br>
+                    • Checking results 📊<br>
+                    • Fee balances 💰<br>
+                    • Unit registration 📝<br>
+                    • Reporting ✅<br>
+                    • Academic inquiries 🎓<br>
+                    <em>Click the record button to speak to me!</em>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="user-input" placeholder="Type your message or use voice..." />
+                <button id="voice-record" class="voice-record" title="Voice Input">
+                    <span class="record-icon"></span>
+                </button>
+                <button id="send-btn" class="send-btn">Send</button>
+            </div>
+            <div class="voice-controls">
+                <div id="voice-status" class="voice-status hidden">
+                    <div class="voice-status-content">
+                        <div class="voice-pulse"></div>
+                        <span>Listening... Speak now</span>
+                    </div>
+                    <button id="stop-voice" class="stop-voice">Stop</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

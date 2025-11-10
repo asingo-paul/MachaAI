@@ -1,2 +1,11 @@
 venv/
 .env
+
+__pycache__/
+*.pyc
+.mypy_cache/
+.env
+machaai.db
+instance/
+.vscode/
+.idea/
